@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:socialmedia_clone/model/userdata.dart';
+import 'package:socialmedia_clone/views/addpost.dart';
 import 'package:socialmedia_clone/views/friendlist.dart';
 import 'package:socialmedia_clone/views/infoheader.dart';
 import 'package:socialmedia_clone/views/mainheader.dart';
@@ -38,11 +39,14 @@ class _SocialmediaState extends State<Socialmedia> {
           Infoheader(userdata: userdata),
           Friendlist(userdata: userdata),
           const SizedBox(height: 20),
+
           Padding(
             padding: const EdgeInsets.only(left: 8.0),
             child: Row(children: [Text('Posts', style: followTxtStyle)]),
           ),
           const SizedBox(height: 20),
+          AddPost(),
+          SizedBox(height: 15),
           Postlist(userdata: userdata),
         ],
       ),
